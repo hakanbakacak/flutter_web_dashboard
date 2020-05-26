@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+/*import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/src/commons/theme.dart';
 import 'package:flutter_web_dashboard/src/widget/card_tile.dart';
@@ -18,16 +18,7 @@ class MainPage extends StatelessWidget {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
 
-        if (constraints.maxWidth <= 800) {
-          return Center(
-            child: Text('küçük'),
-          );
-        } else if (constraints.maxWidth <= 1280 &&
-            constraints.maxWidth >= 800) {
-          return Center(
-            child: Text('ddede'),
-          );
-        } else if (constraints.maxWidth >= 1280) {
+          
           return Material(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -184,9 +175,9 @@ class MainPage extends StatelessWidget {
               ],
             ),
           );
-        }
-        return Container();
+
       },
     );
   }
 }
+*/

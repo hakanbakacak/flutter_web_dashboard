@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dashboard/src/pages/admin_page.dart';
 import 'package:flutter_web_dashboard/src/pages/main_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(title: TextStyle(color: Colors.black)),
         fontFamily: GoogleFonts.montserrat().fontFamily,
       ),
-      home: MainPage(),
+      home: AdminPage(),
     );
   }
 }
