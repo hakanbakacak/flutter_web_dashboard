@@ -27,8 +27,8 @@ class Project {
 
 List<Project> projectItems = [
   Project(
-      assigned: 'Sunil Joshi',
-      name: 'Elite Admin',
+      assigned: 'MR Görüntüsü',
+      name: '1200MB',
       priority: Priority.Low,
       position: 'Web Designer',
       budget: 3.9,

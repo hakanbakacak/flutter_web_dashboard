@@ -3,21 +3,33 @@ import 'package:flutter_web_dashboard/src/commons/theme.dart';
 import 'package:flutter_web_dashboard/src/model/menu.dart';
 import 'package:flutter_web_dashboard/src/widget/menu_item_tile.dart';
 
+
+
+
+
 class SideBarMenu extends StatefulWidget {
+  SideBarMenu(this.onSelectedIndexChange);
+  final Function(int) onSelectedIndexChange;
   @override
-  _SideBarMenuState createState() => _SideBarMenuState();
+  _SideBarMenuState createState() => _SideBarMenuState(onSelectedIndexChange);
 }
 
 class _SideBarMenuState extends State<SideBarMenu>
     with SingleTickerProviderStateMixin {
+  _SideBarMenuState(this.onSelectedIndexChange);
   double maxWidth = 250;
   double minWidgth = 70;
   bool collapsed = false;
   int selectedIndex = 0;
 
+ 
+  final Function(int) onSelectedIndexChange;
+
   AnimationController _animationController;
   Animation<double> _animation;
-
+  int getSelectedIndex(){
+    return selectedIndex;
+  }
   @override
   void initState() {
     super.initState();
@@ -75,7 +87,7 @@ class _SideBarMenuState extends State<SideBarMenu>
                             width: _animation.value >= 250 ? 20 : 0,
                           ),
                           (_animation.value >= 250)
-                              ? Text('Yasin ilhan',
+                              ? Text('Admin Admin',
                                   style: menuListTileDefaultText)
                               : Container(),
                         ],
@@ -86,7 +98,7 @@ class _SideBarMenuState extends State<SideBarMenu>
                       Spacer(),
                       (_animation.value >= 250)
                           ? Text(
-                              'Yasin ilhan',
+                              'Admin Admin',
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.white,
@@ -96,7 +108,7 @@ class _SideBarMenuState extends State<SideBarMenu>
                           : Container(),
                       (_animation.value >= 250)
                           ? Text(
-                              'yasinilhan61@gmail.com',
+                              'admin@admin.com',
                               style: TextStyle(
                                 fontSize: 13,
                                 color: Colors.white,
@@ -127,7 +139,9 @@ class _SideBarMenuState extends State<SideBarMenu>
                       isSelected: selectedIndex == index,
                       onTap: () {
                         setState(() {
+                          onSelectedIndexChange(index);
                           selectedIndex = index;
+                          
                         });
                       },
                     );

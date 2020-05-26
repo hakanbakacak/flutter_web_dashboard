@@ -46,19 +46,19 @@ class ProjectWidget extends StatelessWidget {
                         children: <Widget>[
                           SizedBox(width: 2),
                           Text(
-                            'Assigned',
+                            'Veri',
                             style: TextStyle(color: Colors.grey),
                           ),
                           Text(
-                            'Name',
+                            'Boyut',
                             style: TextStyle(color: Colors.grey),
                           ),
                           Text(
-                            'Priority',
+                            'Yenile',
                             style: TextStyle(color: Colors.grey),
                           ),
                           Text(
-                            'Budget',
+                            'Miktar',
                             style: TextStyle(color: Colors.grey),
                           ),
                         ],
